@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/glucerna/clientlibs"/>
+    <filter root="/apps/glucerna/components"/>
+    <filter root="/apps/glucerna/i18n"/>
+</workspaceFilter>
