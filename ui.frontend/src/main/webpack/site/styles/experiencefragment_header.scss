@@ -2,15 +2,16 @@
 //== XF Header style, used on page template
 
 header.experiencefragment {
-    padding: .5em 1em;
-    border-bottom: 1px solid $color-foreground;
+    /* padding: .5em 1em;
+    border-bottom: 1px solid $color-foreground; */
 
     @media (prefers-color-scheme: dark) {
         border-bottom-color: $color-foreground-dark;
     }
 
-    a {
-        color: $color-foreground;
+    /* a {
+        color: white;
+        padding: 10px 20px;
         text-decoration: none;
 
         @media (prefers-color-scheme: dark) {
@@ -26,13 +27,13 @@ header.experiencefragment {
                 color: $color-link-dark;
             }
         }
-    }
+    } */
 
     //== Grid layout
 
     .cmp-container {
-        display: grid;
-        grid-template-columns: 4fr 1fr 1fr;
+        /* display: grid;
+        grid-template-columns: 4fr 1fr 1fr; */
     }
 
     //== Navigation
