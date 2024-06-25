@@ -1,0 +1,23 @@
+.primary-header {
+	background-color:#002d72; &-list {}
+
+	&-center {
+		display: flex;
+		justify-content: end;
+		padding: 0px 10%;
+
+		&-anchor {
+			color: white;
+			padding: 10px 20px;
+			text-decoration: none;
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+
+   .primary-header{
+   display:none;
+   }
+
+}

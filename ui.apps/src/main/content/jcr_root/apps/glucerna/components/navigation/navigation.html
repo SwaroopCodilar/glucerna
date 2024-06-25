@@ -1,0 +1,20 @@
+<sly data-sly-use.navigation="com.adobe.cq.wcm.core.components.models.Navigation"/>
+
+<div>
+    <nav class="navbar ">
+        <div class="hamburger-bar" id="hamburger">
+            <img class="hamburger-bar-image"
+                 src="/etc.clientlibs/glucerna/clientlibs/clientlib-site/resources/images/burger-bar.png"/>
+            <img class="hamburger-bar-cross"
+                 src="/etc.clientlibs/glucerna/clientlibs/clientlib-site/resources/images/cross-icon.png"
+                 style="display:none;"/>
+        </div>
+        <ul class="navbar-ul " data-sly-list.nav="${navigation.items}">
+            <li class="navbar-ul-list" data-sly-test="${nav.children.size==0}">
+                <a class="navbar-ul-title" href="${nav.page.path}.html">${nav.page.title}</a>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+
