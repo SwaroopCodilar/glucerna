@@ -1,0 +1,43 @@
+<sly data-sly-use.demo="com.adobe.aem.guides.glucerna.core.models.FooterMultifieldParent"/>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='GlucernaFooter.glucerna'}" />
+</sly>
+
+<div class="main_container">
+    <div class="parent_container">
+        <div class="list items1">
+            <h6>${demo.title1}<button>▼</button></h6>
+            <sly data-sly-list.multi1="${demo.fields1}">
+                <a>${multi1.itemName}</a>
+            </sly>
+            <sly data-sly-list.multi2="${demo.fields2}">
+                <a>${multi2.itemName}</a>
+            </sly>
+        </div>
+        <div class="list items2">
+            <sly data-sly-list.multi2="${demo.fields2}">
+                <a>${multi2.itemName}</a>
+            </sly>
+        </div>
+        <div class="list items3">
+            <h6>${demo.title3}<button>▼</button></h6>
+            <sly data-sly-list.multi3="${demo.fields3}">
+                <a>${multi3.itemName}</a>
+            </sly>
+        </div>
+        <div class="list items4">
+            <h6>${demo.title4}<button>▼</button></h6>
+            <sly data-sly-list.multi4="${demo.fields4}">
+                <a>${multi4.itemName}</a>
+            </sly>
+            <sly data-sly-list.multi5="${demo.fields5}">
+                <a>${multi5.itemName}</a>
+            </sly>
+        </div>
+        <div class="list items5">
+            <sly data-sly-list.multi5="${demo.fields5}">
+                <a>${multi5.itemName}</a>
+            </sly>
+        </div>
+    </div>
+</div>
