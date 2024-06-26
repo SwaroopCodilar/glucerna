@@ -1,2 +1,0 @@
-#base=js
-glucena_footer.js

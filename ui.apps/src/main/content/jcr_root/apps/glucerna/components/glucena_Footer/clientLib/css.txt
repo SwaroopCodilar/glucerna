@@ -1,2 +1,0 @@
-#base=css
-glucena_footer.css
