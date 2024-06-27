@@ -9,9 +9,9 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 public class IconFields {
 
     @ValueMapValue
-    private String fileReference;
+    private String file;
 
-    public String getFileReference() {
-        return fileReference;
+    public String getFile() {
+        return file;
     }
 }

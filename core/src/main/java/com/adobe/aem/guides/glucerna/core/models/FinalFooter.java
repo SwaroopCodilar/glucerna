@@ -18,7 +18,7 @@ public class FinalFooter {
     List<PolicyFields> field1;
 
     @ValueMapValue
-    private String fileReference;
+    private String file;
 
     @ValueMapValue
     private String text;
@@ -34,8 +34,8 @@ public class FinalFooter {
         return field1;
     }
 
-    public String getFileReference() {
-        return fileReference;
+    public String getFile() {
+        return file;
     }
 
     public String getText() {

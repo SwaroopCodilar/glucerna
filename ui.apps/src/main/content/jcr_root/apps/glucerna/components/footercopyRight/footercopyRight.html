@@ -5,7 +5,7 @@
 <div class="finalfooter_main_container">
   <div class="logo_container">
     <div>
-      <img class="logo_img" src="${footer.fileReference}" />
+      <img class="logo_img" src="${footer.file}" />
     </div>
 
     <div class="logo_img">
@@ -13,12 +13,7 @@
 
       <div>
         <sly data-sly-list.footerItems="${footer.fields}">
-          <img
-            class="footer_icons"
-            src="${footerItems.fileReference}"
-            width="25px"
-            height="25px"
-          />
+          <img class="footer_icons" src="${footerItems.file}" />
         </sly>
       </div>
     </div>
