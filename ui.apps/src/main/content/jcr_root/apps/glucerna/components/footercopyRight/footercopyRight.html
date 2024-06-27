@@ -1,0 +1,36 @@
+<sly
+  data-sly-use.footer="com.adobe.aem.guides.glucerna.core.models.FinalFooter"
+/>
+
+<div class="finalfooter_main_container">
+  <div class="logo_container">
+    <div>
+      <img class="logo_img" src="${footer.fileReference}" />
+    </div>
+
+    <div class="logo_img">
+      <h4>${footer.text}</h4>
+
+      <div>
+        <sly data-sly-list.footerItems="${footer.fields}">
+          <img
+            class="footer_icons"
+            src="${footerItems.fileReference}"
+            width="25px"
+            height="25px"
+          />
+        </sly>
+      </div>
+    </div>
+  </div>
+
+  <div class="policy_container">
+    <sly data-sly-list.policyItems="${footer.field1}">
+      <a>${policyItems.policyContent}</a>
+    </sly>
+  </div>
+
+  <div class="copyRight_container">
+    <p>${footer.copyRight}</p>
+  </div>
+</div>

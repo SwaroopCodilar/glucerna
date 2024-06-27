@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Final Footer"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <copyRightTabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <logoTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="LOGO AND ICONS"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <logo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                fieldLabel="Upload logo here"
+                                fileReferenceParameter="./fileReference"
+                                mimeTypes="image/gif,image/png,image/jpeg"
+                                name="./file"/>
+                            <stayConnect
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Text Content"
+                                name="./text"/>
+                            <iconsMulitifield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./fields">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <icons
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                            fieldLabel="Upload logo here"
+                                            fileReferenceParameter="./fileReference"
+                                            mimeTypes="image/gif,image/png,image/jpeg,image/svg"
+                                            name="./file"/>
+                                    </items>
+                                </field>
+                            </iconsMulitifield>
+                        </items>
+                    </logoTab>
+                    <policy
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="POLICY"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <policyMulitifield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./field1">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <contentList
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Policy Content"
+                                            name="./policyContent"/>
+                                    </items>
+                                </field>
+                            </policyMulitifield>
+                        </items>
+                    </policy>
+                    <copyright
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="COPY RIGHT"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <contentList
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Copy-Right Content"
+                                name="./copyRight"/>
+                        </items>
+                    </copyright>
+                </items>
+            </copyRightTabs>
+        </items>
+    </content>
+</jcr:root>
