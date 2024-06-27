@@ -21,7 +21,7 @@ public class VideoComp {
         return path;
     }
 
-    public String getVideoPoster() {s
+    public String getVideoPoster() {
         return videoPoster;
     }
 
