@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Footer-Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <sitePagesTab1
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="SITE PAGES"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <listTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Title of List Items"
+                                name="./title1"/>
+                            <multifield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./fields1">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <listContent
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="List-Items"
+                                            name="./itemName"/>
+                                    </items>
+                                </field>
+                            </multifield>
+                        </items>
+                    </sitePagesTab1>
+                    <contactTab2
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="CONTACT-US"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <multifield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./fields2">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <listContent
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="List-Items"
+                                            name="./itemName"/>
+                                    </items>
+                                </field>
+                            </multifield>
+                        </items>
+                    </contactTab2>
+                    <abbotTab3
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="ABBOT"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <listTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Title of List Items"
+                                name="./title3"/>
+                            <multifield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./fields3">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <listContent
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="List-Items"
+                                            name="./itemName"/>
+                                    </items>
+                                </field>
+                            </multifield>
+                        </items>
+                    </abbotTab3>
+                    <abbotBrandsTab4
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="ABBOT-BRANDS"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <listTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Title of List Items"
+                                name="./title4"/>
+                            <multifield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./fields4">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <listContent
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="List-Items"
+                                            name="./itemName"/>
+                                    </items>
+                                </field>
+                            </multifield>
+                        </items>
+                    </abbotBrandsTab4>
+                    <others
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="OTHERS"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <multifield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./fields5">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <listContent
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="List-Items"
+                                            name="./itemName"/>
+                                    </items>
+                                </field>
+                            </multifield>
+                        </items>
+                    </others>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
