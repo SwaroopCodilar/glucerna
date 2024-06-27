@@ -4,7 +4,7 @@
     <div data-sly-test="${compo.path == 'dam'}">
         <div class="video-container video_dam">
             <video id="myVideo"
-                   poster="/content/dam/glucerna/glucerna%20videoposter.jpg"
+                   poster="${compo.videoPoster}"
                    style="cursor: pointer;"
                    >
                 <source src="${compo.damVideoPath}" type="video/mp4" />
@@ -15,7 +15,7 @@
     <div data-sly-test="${compo.path == 'youtube'}">
         <div class="video-container vid_youtube">
             <iframe style="width:100%;height:100%;"
-                    src="${compo.youtubeUrl}?autoplay=1&rel=0&mute=1"
+                    src="${compo.youtubeUrl}"
                     title="GLUCERNA HELPS MANAGE GLUCOSE LEVELS WITH 4X MYO-INOSITOL AND UNIQUE CARBOHYDRATE."
                     frameborder="0"
                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
