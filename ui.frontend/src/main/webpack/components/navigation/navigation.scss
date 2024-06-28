@@ -2,6 +2,8 @@
   border-top: 1px solid #002d72;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24186);
   background-color: white;
+  position: relative;
+  z-index: 0;
   &-ul {
     display: flex;
     list-style: none;
@@ -34,15 +36,17 @@
 .navbar-ul-list:nth-child(6) {
   background: #ffd100;
 }
-
+.hamburger-bar-where{
+   display:none;
+}
 @media screen and (max-width: 768px) {
   .navbar {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
+
     &-ul {
       display: none;
-      position: fixed;
       padding: 0px;
       margin-left: 30px;
       width: 100%;
@@ -52,11 +56,12 @@
       &-list {
         width: 100%;
         text-align: left;
-        padding: 10px 0px 0px 10px;
+        padding: 0px 0px 10px 10px;
         background-color: #fefefe;
         border: 1px solid #888;
         width: 100%;
         border: none;
+        display: inline-block;
       }
       &-title {
         display: block;
@@ -74,18 +79,30 @@
       display: block !important;
     }
   }
-
+.navbar-position{
+    position:absolute;
+    margin-top: 0px;
+    width: -webkit-fill-available;
+    }
   .hamburger-bar {
-    display: block;
-    position: fixed;
+     display: flex;
+     position: relative;
+     align-items:center;
     &-image,
     &-cross {
       width: 30px;
       height: 30px;
+      z-index: 1;
     }
+
   }
 
   .open {
-    display: block;
+    display: flex;
   }
+  .hamburger-bar-where{
+      background-color: yellow;
+      padding: 5px 10px;
+      display:block;
+      }
 }
