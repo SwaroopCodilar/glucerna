@@ -1,0 +1,11 @@
+
+<sly data-sly-use.bannerimage="com.adobe.aem.guides.glucerna.core.models.BannerImage">
+    <div class="container_image_desktop">
+        <img class="image" src="${bannerimage.desktopRefernce}">
+        <div class="image_title" >${bannerimage.desktoptitle @ context='html'} </div>
+    </div>
+    <div class="container_image_mobile">
+        <img class="image" src="${bannerimage.mobileReference}">
+        <div class="image_title" >${bannerimage.mobiletitle @ context='html'} </div>
+    </div>
+</sly>
