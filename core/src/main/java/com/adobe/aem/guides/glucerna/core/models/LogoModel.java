@@ -16,4 +16,13 @@ public class LogoModel {
     @ValueMapValue
    private String abbotLogo;
 
+    @ValueMapValue
+    private String logoUrl;
+
+    @ValueMapValue
+    private String abbottLogoUrl;
+
+    @ValueMapValue
+    private String newTab;
+
 }
