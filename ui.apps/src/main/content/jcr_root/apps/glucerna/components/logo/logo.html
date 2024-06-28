@@ -2,8 +2,8 @@
      data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
    
     <div class="header-logo" >
-        <img class="header-logo-imagelogo" src="${logo.logoImage}" />
-        <img class="header-logo-abbott" src="${logo.abbotLogo}" />
+        <a href="${logo.logoUrl}.html" ><img class="header-logo-imagelogo" src="${logo.logoImage}" /></a>
+        <a href="${logo.abbottLogoUrl}" target="${logo.newTab ? '_blank' : '_self'}"><img class="header-logo-abbott" src="${logo.abbotLogo}" /></a>
     </div>
   
 </sly>
