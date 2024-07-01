@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.cmp-accordion__button .cmp-accordion__icon::before {
+  content: "+";
+  font-size: 40px;
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.cmp-accordion__button[aria-expanded="true"] .cmp-accordion__icon::before {
+  content: "-";
+  font-size: 40px;
+}
+.cmp-accordion__button:hover {
+  cursor: pointer;
+}
+
+.cmp-accordion__item {
+  width: 750px;
+  border-bottom: 1px solid #fff;
+  transition: 2s ease-in;
+}
+.cmp-accordion__title {
+  padding: 16px 0 16px 24px;
+  font-size: 32px;
+  color: #fff;
+}
+
+.cmp-accordion__button {
+  display: flex;
+  justify-content: space-between;
+  background-color: #112d72;
+  border: none;
+  padding: 10px 10px 10px 10px;
+  color: #fff;
+}
+
+.main_container_items {
+  background-color: #80ceef;
+}
+
+.text_Container {
+  padding: 35px 46px 0px 67px;
+  color: #1f3e7c;
+  text-decoration: none;
+}
+.text_Container h3 {
+  margin-bottom: 8px;
+}
+
+.text_Container a {
+  color: #1f3e7c;
+  text-decoration: none;
+}
+
+.upper_case {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.text_Container p {
+  padding-bottom: 13px;
+}
+.text_items {
+  border-bottom: 2px solid #fff;
+}
