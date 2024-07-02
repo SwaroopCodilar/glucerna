@@ -8,7 +8,7 @@
                 var width = $(window).width();
                 var $container = $('.container_items');
 
-                if (width <= 992 && width >= 768) {
+                if (width < 993 && width > 767) {
                     // Remove divs with col-md-4 or col-md-8 classes and unwrap .responsiveGrid content
                     $container.find('div.col-md-4, div.col-md-8').each(function() {
                         $(this).find('.responsiveGrid').children().unwrap();
