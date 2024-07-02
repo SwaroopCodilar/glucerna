@@ -30,10 +30,6 @@
     </script>
 </sly>
 
-<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html">
-    <sly data-sly-call="${clientLib.all @ categories='glucerna.columnV'}"/>
-</sly>
-
 <sly data-sly-use.columnRatio="com.adobe.aem.guides.glucerna.core.models.ColumnRatio">
     <div class="rows" id="dynamicRow" data-ratios="${columnRatio.columnRatios}">
         <div class="container_items">
