@@ -1,35 +1,4 @@
-<sly data-sly-test="${wcmmode.disabled}">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            var originalHtml = $('.container_items').html();
-
-            function updateColumns() {
-                var width = $(window).width();
-                var $container = $('.container_items');
-
-                if (width < 993 && width > 767) {
-                    // Remove divs with col-md-4 or col-md-8 classes and unwrap .responsiveGrid content
-                    $container.find('div.col-md-4, div.col-md-8').each(function() {
-                        $(this).find('.responsiveGrid').children().unwrap();
-                        $(this).children().unwrap();
-                    });
-                } else {
-                    $container.html(originalHtml);
-                }
-            }
-
-            $(window).on('resize', updateColumns);
-            updateColumns();
-
-            // Optional: If you want to re-initialize on orientation change (e.g., for mobile devices)
-            $(window).on('orientationchange', function() {
-                updateColumns();
-            });
-        });
-    </script>
-</sly>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <sly data-sly-use.columnRatio="com.adobe.aem.guides.glucerna.core.models.ColumnRatio">
     <div class="rows" id="dynamicRow" data-ratios="${columnRatio.columnRatios}">
         <div class="container_items">
