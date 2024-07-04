@@ -39,10 +39,15 @@ public class VideoComp {
 
     @PostConstruct
     protected void init(){
-        StringBuilder buildYoutubeUrl=new StringBuilder(youtubeUrl);
-        buildYoutubeUrl.append("?autoplay=").append(autoplay).append("&rel=").append(rel).append("&mute=").append(mute);
-        System.out.println(buildYoutubeUrl);
-        youtubeUrl= buildYoutubeUrl.toString();
-        System.out.println(youtubeUrl);
+        try {
+            StringBuilder buildYoutubeUrl = new StringBuilder(youtubeUrl);
+            buildYoutubeUrl.append("?autoplay=").append(autoplay).append("&rel=").append(rel).append("&mute=").append(mute);
+            System.out.println(buildYoutubeUrl);
+            youtubeUrl = buildYoutubeUrl.toString();
+            System.out.println(youtubeUrl);
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }
