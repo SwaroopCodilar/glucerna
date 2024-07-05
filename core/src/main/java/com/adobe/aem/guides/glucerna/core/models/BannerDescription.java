@@ -5,6 +5,9 @@ import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
+import lombok.Getter;
+
+@Getter
 @Model(adaptables = Resource.class,defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class BannerDescription {
 
@@ -26,28 +29,5 @@ public class BannerDescription {
     @ValueMapValue
     private String backgroundimage;
 
-    public String getLogoReference() {
-        return logoReference;
-    }
-
-    public String getTitledetails() {
-        return titledetails;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getDiscountdescription() {
-        return discountdescription;
-    }
-
-    public String getButtontext() {
-        return buttontext;
-    }
-
-    public String getBackgroundimage() {
-        return backgroundimage;
-    }
 
 }

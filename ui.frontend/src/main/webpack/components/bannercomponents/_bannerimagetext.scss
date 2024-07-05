@@ -6,10 +6,11 @@
     font-family:"brandon_textblack",sans-serif;
     line-height : 10px;
   }
-  .container_image_desktop .image_title{
+  .container_image_desktop .image_title {
+    bottom: -18px;
+    left: 35px;
     position: absolute;
-    bottom: 20px;
-    left: 40px;
+    line-height: 45px;
   }
   .container_image_desktop .image{
     width:100%;

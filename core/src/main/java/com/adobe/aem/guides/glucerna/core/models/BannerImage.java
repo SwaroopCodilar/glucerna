@@ -5,6 +5,9 @@ import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
+import lombok.Getter;
+
+@Getter
 @Model(adaptables = Resource.class,defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class BannerImage {
 
@@ -19,21 +22,5 @@ public class BannerImage {
 
     @ValueMapValue
     private String mobiletitle;
-
-    public String getDesktopRefernce() {
-        return desktopRefernce;
-    }
-
-    public String getDesktoptitle() {
-        return desktoptitle;
-    }
-
-    public String getMobileReference() {
-        return mobileReference;
-    }
-
-    public String getMobiletitle() {
-        return mobiletitle;
-    }
 
 }
