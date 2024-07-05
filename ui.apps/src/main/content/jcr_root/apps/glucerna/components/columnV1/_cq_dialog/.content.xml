@@ -44,6 +44,11 @@
                                 value="8:4:4:4:4"/>
                         </items>
                     </selectParsys>
+                    <id
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Id"
+                        name="./id"/>
                 </items>
             </column>
         </items>

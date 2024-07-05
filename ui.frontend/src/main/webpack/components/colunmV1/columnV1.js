@@ -1,26 +1,36 @@
 if (typeof Granite === 'undefined' || typeof Granite.author === 'undefined') {
     $(document).ready(function() {
-        var originalHtml = $('.container_items').html();
+        var originalHtmlMap = {};
+
+        $('.container_items').each(function() {
+            var $container = $(this);
+            var containerId = $container.parent('.rows').attr('id');
+
+            originalHtmlMap[containerId] = $container.html();
+        });
 
         function updateColumns() {
             var width = $(window).width();
-            var $container = $('.container_items');
 
-            if (width < 993 && width > 767) {
-                $container.find('div.col-md-4, div.col-md-8').each(function() {
-                    $(this).find('.responsiveGrid').children().unwrap();
-                    $(this).children().unwrap();
-                });
-            } else {
-                $container.html(originalHtml);
-            }
+            $('.container_items').each(function() {
+                var $container = $(this);
+                var containerId = $container.parent('.rows').attr('id');
+
+                if (width < 993 && width > 767) {
+                    $container.find('div.col-md-4, div.col-md-8').each(function() {
+                        var $this = $(this);
+                        $this.find('.responsiveGrid').children().unwrap();
+                        $this.children().unwrap();
+                    });
+                } else {
+                    if (containerId && originalHtmlMap[containerId]) {
+                        $container.html(originalHtmlMap[containerId]); 
+                    }
+                }
+            });
         }
 
-        $(window).on('resize', updateColumns);
-        updateColumns();
-
-        $(window).on('orientationchange', function() {
-            updateColumns();
-        });
+        $(window).on('resize orientationchange', updateColumns);
+        $(window).trigger('resize');
     });
 }

@@ -1,6 +1,7 @@
-.rows{
-    background-color:white;
-    margin:16px 16px 0px 16px;
+.container-width{
+    max-width: 1200px;
+    margin: auto 10.45%;
+    background-color: white;
 
 }
 .container_items{
@@ -62,5 +63,15 @@
     .container_items > div:not(:first-child) {
         flex: 0 0 98%;
     }
+}
+
+@media (min-width: 1441px){
+
+	.container-width{
+        max-width: 1200px;
+    	margin: auto;
+    	background-color: white;
+    }
+
 }
 
