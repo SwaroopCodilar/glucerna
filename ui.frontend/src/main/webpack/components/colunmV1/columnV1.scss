@@ -1,3 +1,10 @@
+.container-width{
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+    float: none !important;
+
+}
 .container_items{
     display: flex;
     flex-wrap:wrap;
@@ -40,23 +47,22 @@
 }
 
 @media (max-width: 993px) {
-    .container_items > div:first-child {
+    :not([id*="main"]) > .container_items > div:first-child {
         flex: 0 0 100%;
     }
 
-    .container_items > div:not(:first-child) {
+    :not([id*="main"]) > .container_items > div:not(:first-child) {
         flex: 0 0 48%;
     }
 }
 
 @media (max-width: 767px) {
-    .container_items > div:first-child {
+    :not([id*="main"]) > .container_items > div:first-child {
         flex: 0 0 100%;
     }
 
-    .container_items > div:not(:first-child) {
+    :not([id*="main"]) > .container_items > div:not(:first-child) {
         flex: 0 0 98%;
     }
 }
-
 

@@ -1,30 +1,43 @@
 if (typeof Granite === 'undefined' || typeof Granite.author === 'undefined') {
     $(document).ready(function() {
-        var originalHtmlMap = {};
+        const originalHtmlMap = {};
 
         $('.container_items').each(function() {
-            var $container = $(this);
-            var containerId = $container.parent('.rows').attr('id');
+            const $container = $(this);
+            const containerId = $container.parent('.rows').attr('id');
 
-            originalHtmlMap[containerId] = $container.html();
+            if (containerId) {
+                $container.find('div.col-md-4, div.col-md-8').each(function() {
+                    const $this = $(this);
+                    const $responsiveGrid = $this.find('.responsiveGrid');
+
+                    if ($responsiveGrid.length === 0 || $responsiveGrid.children().length === 0) {
+                        $this.remove();
+                    }
+                });
+
+                originalHtmlMap[containerId] = $container.html();
+            }
         });
 
         function updateColumns() {
-            var width = $(window).width();
+            const width = $(window).width();
 
             $('.container_items').each(function() {
-                var $container = $(this);
-                var containerId = $container.parent('.rows').attr('id');
+                const $container = $(this);
+                const containerId = $container.parent('.rows').attr('id');
 
-                if (width < 993 && width > 767) {
-                    $container.find('div.col-md-4, div.col-md-8').each(function() {
-                        var $this = $(this);
-                        $this.find('.responsiveGrid').children().unwrap();
-                        $this.children().unwrap();
-                    });
-                } else {
-                    if (containerId && originalHtmlMap[containerId]) {
-                        $container.html(originalHtmlMap[containerId]); 
+                if (containerId && !containerId.includes('main')) {
+                    if (width < 993 && width > 767) {
+                        $container.find('div.col-md-4, div.col-md-8').each(function() {
+                            const $this = $(this);
+                            $this.find('.responsiveGrid').children().unwrap();
+                            $this.children().unwrap();
+                        });
+                    } else {
+                        if (originalHtmlMap[containerId]) {
+                            $container.html(originalHtmlMap[containerId]);
+                        }
                     }
                 }
             });
