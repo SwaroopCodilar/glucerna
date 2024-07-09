@@ -1,26 +1,49 @@
 if (typeof Granite === 'undefined' || typeof Granite.author === 'undefined') {
     $(document).ready(function() {
-        var originalHtml = $('.container_items').html();
+        const originalHtmlMap = {};
+
+        $('.container_items').each(function() {
+            const $container = $(this);
+            const containerId = $container.parent('.rows').attr('id');
+
+            if (containerId) {
+                $container.find('div.col-md-4, div.col-md-8').each(function() {
+                    const $this = $(this);
+                    const $responsiveGrid = $this.find('.responsiveGrid');
+
+                    if ($responsiveGrid.length === 0 || $responsiveGrid.children().length === 0) {
+                        $this.remove();
+                    }
+                });
+
+                originalHtmlMap[containerId] = $container.html();
+            }
+        });
 
         function updateColumns() {
-            var width = $(window).width();
-            var $container = $('.container_items');
+            const width = $(window).width();
 
-            if (width < 993 && width > 767) {
-                $container.find('div.col-md-4, div.col-md-8').each(function() {
-                    $(this).find('.responsiveGrid').children().unwrap();
-                    $(this).children().unwrap();
-                });
-            } else {
-                $container.html(originalHtml);
-            }
+            $('.container_items').each(function() {
+                const $container = $(this);
+                const containerId = $container.parent('.rows').attr('id');
+
+                if (containerId && !containerId.includes('main')) {
+                    if (width < 993 && width > 767) {
+                        $container.find('div.col-md-4, div.col-md-8').each(function() {
+                            const $this = $(this);
+                            $this.find('.responsiveGrid').children().unwrap();
+                            $this.children().unwrap();
+                        });
+                    } else {
+                        if (originalHtmlMap[containerId]) {
+                            $container.html(originalHtmlMap[containerId]);
+                        }
+                    }
+                }
+            });
         }
 
-        $(window).on('resize', updateColumns);
-        updateColumns();
-
-        $(window).on('orientationchange', function() {
-            updateColumns();
-        });
+        $(window).on('resize orientationchange', updateColumns);
+        $(window).trigger('resize');
     });
 }
